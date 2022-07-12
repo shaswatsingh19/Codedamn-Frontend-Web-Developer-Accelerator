@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:linear-gradient(90deg ,#ec2c2c,#d29e62,#e9993d );
+    font-family: Poppins, sans-serif
+}
+
+.container{
+    border: 2px solid black;
+    margin: 0 auto;
+    text-align: center;
+    width: 70%;
+    max-width: 600px;
+    padding: 60px 0;
+    color: white;
+}
+
+#line{
+    width:30px;
+    height:2px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+
+input{
+    border:none;
+}
+#text{
+    width: 70%;
+    padding: 5px 10px;
+    outline: none;
+    font-size: 1.2rem;
+    margin-right: -4px;
+}
+input[type='button']{
+    padding: 5px;
+    font-size: 1.04rem;
+    color:white
+}
+#add-task{
+    margin-right: -4px;
+    background-color: #e9adad;;
+}
+
+#del-task{
+    background-color: #540a0a;
+}
+
+input[type='button']:active{
+    transform: scale(.92);
+}
+
+
+.new-tasks{
+    margin: 25px auto;
+    width: 70%;
+    border: 2px solid red;
+}
+
+.task{
+    
+}
+
