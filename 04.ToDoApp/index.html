@@ -8,25 +8,26 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
+
 		<div class="container">
 			<h1>ADD TODO LIST</h1>
 			<div id="line"></div>
 			<div class="task-input">
-				<input type="text" name="text" id="text" placeholder="Add Task...">
-				<input type="button" value="➕" id="add-task">
-				<input type="button" value="❌" id="del-task">
+				<input type="text" id="add-task" name="todo" placeholder="Add Task..." value="">
+				<input type="button" value="➕" name='add' id="add-btn" title="Add Task">
+				<input type="button" value="❌" name='delete' id="del-btn" title="Remove All Task">
 			</div>
 			<div class="new-tasks">
 				<div class="task">
-					<input type="text" name="text" id="text" disabled value="brush your teeth">
-					<input type="button" value="➕" id="add-task">
+					<input type="checkbox" id="complete-task">
+					<input type="text" id="added-task" disabled value='sd'>
+					<input type="button" value="✏️" id="rename-task">
 					<input type="button" value="❌" id="del-task">
 				</div>
-				<p>brush your teeth  brush your teeth brush your teeth </p>
-				<p>brush your teeth  brush your teeth bush your teeth bush your teeth bush your teeth bush your teeth bush your teeth bush your teeth bush your teeth bush your teeth bush your teeth bush your teeth bush your teeth bush your teeth bush your teeth bush your teeth bush your teeth bush your teeth bush your teeth bush your teeth bush your teeth bush your teeth bush your teeth brush your teeth </p>
 			</div>
 		</div>
 
+		<script src="index.js"></script>
 		
 	</body>
 </html>

@@ -32,39 +32,52 @@ body{
 input{
     border:none;
 }
-#text{
+input[type='text']{
     width: 70%;
     padding: 5px 10px;
     outline: none;
     font-size: 1.2rem;
     margin-right: -4px;
+    background-color: #ffffff;
 }
 input[type='button']{
     padding: 5px;
     font-size: 1.04rem;
     color:white
 }
-#add-task{
+#add-btn{
     margin-right: -4px;
-    background-color: #e9adad;;
+    background-color: #e9adad;
+}
+
+#del-btn{
+    background-color: #540a0a;
+}
+
+input[type='button']:active{
+    transform: scale(.96);
+}
+
+
+.new-tasks{
+    margin: 25px auto;
+}
+
+#rename-task{
+    margin-right: -4px;
+    background-color: #e9adad;
+}
+
+#complete-task{
+    
 }
 
 #del-task{
     background-color: #540a0a;
 }
 
-input[type='button']:active{
-    transform: scale(.92);
-}
-
-
-.new-tasks{
-    margin: 25px auto;
-    width: 70%;
-    border: 2px solid red;
-}
-
 .task{
-    
-}
+    margin-top: 10px;
+    border: 1px solid black;
 
+}
