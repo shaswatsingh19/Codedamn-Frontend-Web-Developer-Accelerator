@@ -63,21 +63,17 @@ input[type='button']:active{
     margin: 25px auto;
 }
 
-#rename-task{
+.rename-task{
     margin-right: -4px;
     background-color: #e9adad;
 }
 
-#complete-task{
-    
-}
 
-#del-task{
+.del-task{
     background-color: #540a0a;
 }
 
 .task{
     margin-top: 10px;
-    border: 1px solid black;
 
 }
