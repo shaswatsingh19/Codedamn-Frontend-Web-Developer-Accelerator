@@ -10,7 +10,6 @@ body{
 }
 
 .container{
-    border: 2px solid black;
     margin: 0 auto;
     text-align: center;
     width: 70%;
@@ -28,6 +27,10 @@ body{
     margin-bottom: 20px;
 
 }
+.flex-button{
+    display: inline;
+    width: 100%;
+}
 
 input{
     border:none;
@@ -38,12 +41,20 @@ input[type='text']{
     outline: none;
     font-size: 1.2rem;
     margin-right: -4px;
+    color: rgb(0, 0, 0);
     background-color: #ffffff;
+    cursor:pointer;
+}
+input[type='text']:disabled{
+    cursor:default;
+    color: rgb(227, 213, 213);
+    background-color: rgb(147, 135, 135);
 }
 input[type='button']{
     padding: 5px;
     font-size: 1.04rem;
-    color:white
+    color:white;
+    margin: 0 -3px;
 }
 #add-btn{
     margin-right: -4px;
@@ -55,16 +66,18 @@ input[type='button']{
 }
 
 input[type='button']:active{
-    transform: scale(.96);
+    transform: scale(.94);
 }
 
 
 .new-tasks{
     margin: 25px auto;
 }
-
+.update-task{
+    margin-left: 10px;
+    background-color: #158c47;
+}
 .rename-task{
-    margin-right: -4px;
     background-color: #e9adad;
 }
 
@@ -74,6 +87,21 @@ input[type='button']:active{
 }
 
 .task{
-    margin-top: 10px;
+    width: 92%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    
+}
 
+
+@media screen and (max-width:450px) {
+    .task{
+        display: inline;
+    }
+    .flex-button{
+        display: block;
+        
+    width: 100%;
+    }
 }
