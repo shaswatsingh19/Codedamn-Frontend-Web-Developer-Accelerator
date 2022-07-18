@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Verdana";
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #218380;
+    padding: 15px 25px;
+    color: white;
+}
+#leaderboard{
+
+    cursor: pointer;
+}
+
+
+.container{
+    border: 1px solid rgb(73, 70, 70);
+    border-radius: 10px;
+    width: 50%;
+    padding: 70px 30px;
+    box-shadow: 10px 5px 7px rgb(187, 185, 185);
+    margin: 150px auto;
+    background-color: rgb(245, 241, 241);
+}
+
+.container >h1, .container >p,h2{
+    margin: 0 0 25px 0;
+}
+
+button{
+    outline: none;
+    border: 2px solid rgb(221, 221, 221);
+    background-color: #218380;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom:5px ;
+}
+.start-quiz-btn{
+    padding: 10px;
+    transition: all .1s;
+}
+
+button:hover{
+    background-color: #155e5c;
+}
+
+button:active{
+    transform: scale(.99);
+}
+
+
+.options    {
+    display: flex;
+    flex-direction: column;
+}
+
+#blank{
+    background-color: black;
+    width: 20%;
+    height: 2px;
+    display: inline-block;
+    margin: 0 5px 0 1px;
+
+}
+.options > button , .footer > button{
+    text-align: start;
+    padding: 8px 16px;
+}
+
+hr{
+    height: 2px;
+    background-color: rgb(107, 101, 101);
+    margin-bottom: 10px;
+
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    
+}
+p > .result {
+    margin-top: 110px;
+}
