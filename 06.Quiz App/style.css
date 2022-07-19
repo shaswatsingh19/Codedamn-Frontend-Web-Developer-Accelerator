@@ -19,13 +19,13 @@ header{
 }
 
 
-.container{
+.container,.question-container{
     border: 1px solid rgb(73, 70, 70);
     border-radius: 10px;
     width: 50%;
     padding: 70px 30px;
     box-shadow: 10px 5px 7px rgb(187, 185, 185);
-    margin: 150px auto;
+    margin: 100px auto 0;
     background-color: rgb(245, 241, 241);
 }
 
@@ -47,14 +47,20 @@ button{
     transition: all .1s;
 }
 
-button:hover{
-    background-color: #155e5c;
-}
-
 button:active{
     transform: scale(.99);
 }
 
+
+.correct{
+    background-color: greenyellow;
+    color: black;
+}
+
+.incorrect{
+    background-color: orangered;
+    color: black;
+}
 
 .options    {
     display: flex;

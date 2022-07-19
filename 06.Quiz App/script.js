@@ -41,6 +41,8 @@ const questions = [
 
 const startQuizBtn = document.querySelector('.start-quiz-btn')
 const startCard = document.querySelector('main')
+const questionContainer = document.querySelector('.question-container')
+const mcqOptions = document.getElementsByClassName('option')
 
 
 startQuizBtn.addEventListener('click',() => {
@@ -50,7 +52,42 @@ startQuizBtn.addEventListener('click',() => {
   },400)
 })
 
+let questionNo = 0
 
 function startQuiz(){
   
+  questionContainer.hidden = false
+
+  if (questionNo < questions.length){
+    generateQuestion()
+  }else{
+    // finishExam()
+    console.log('end exam')
+  }             
+
+}
+
+
+function generateQuestion(){
+
+  questionContainer.innerHTML =`
+    <h2 class="question">${questions[questionNo].questionText}<span id="blank"></span>.</h2>
+    <div class="options">
+      <button  class='option'>${questions[questionNo].options[0]}</button>
+      <button class='option'>${questions[questionNo].options[1]}</button>
+      <button class='option'>${questions[questionNo].options[2]}</button>
+      <button class='option'>${questions[questionNo].options[3]}</button>
+    </div>
+    <hr>
+    <div class="footer">
+      <p class="result">Correct/incorrect</p>
+    </div>
+  `
+
+console.log(mcqOptions)
+
+
+  questionNo += 1
+  startQuiz()
+
 }
