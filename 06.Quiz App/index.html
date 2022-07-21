@@ -15,22 +15,39 @@
         <header>
             <a id=leaderboard>View Highscores <i class="fas fa-hand-point-left fa-lg"></i>
             </i></a> 
-            <p id ='timer'>Time : 60</p>
+            <p >Time : <span id='timer'>60</span></p>
         </header>
 
         <main>
             <div class="container">
                 <h1>Coding Quiz Challenge</h1>
                 <p>Try to answer the coding related questions within the time limit.</p>
-                <p>Keep in mind that incorrect question will penelize your time by <span>10 seconds</span></p>
+                <p>Keep in mind that incorrect question will penelize your time by <span>5 seconds</span></p>
                 <button class="start-quiz-btn">Start Quiz</button>
             </div>
         </main>
 
         <div class="question-card" >
             <div class="question-container" hidden>
-            
+        
             </div>
+
+            <div class="end-quiz-card container" hidden>
+                
+            </div>
+
+            <div class="highscore-card container" hidden>
+            <h1>HIGHSCORES</h1>
+            <div class="all-scores">
+            </div>
+            <button class="go-back">Go Back</button>
+            <button class="clear-highscore">Clear Highscores</button>
+                    
+                
+            </div>
+
+            
+            
         </div>
     </div>
     
