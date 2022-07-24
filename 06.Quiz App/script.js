@@ -53,10 +53,12 @@ const leaderboard = document.querySelector('#leaderboard')
 let timer = document.querySelector('#timer')
 let result = document.getElementById('result')
 let storeScore = []
+let interval;
 
 let currQue = 0
 let score = 0
 let playerCount = 0
+
 const a = document.getElementById('a_text')
 const b = document.getElementById('b_text')
 const c = document.getElementById('c_text')
@@ -76,21 +78,18 @@ startQuizBtn.addEventListener('click',() => {
     startCard.hidden = true
     questionContainer.hidden = false
     startQuiz()
+    interval = setInterval(() =>{
+      timer.textContent = parseInt(timer.textContent)-1
+    },1000)
   },400)
-
-  
-  console.log(timer)
   
 })
 
 function startQuiz(){
-
-  setInterval(() =>{
-    timer.textContent = parseInt(timer.textContent)-1
-  },1000)
   
   const currQuestionData = questions[currQue]
   console.log(currQuestionData)
+
   if(currQue < questions.length  && parseInt(timer.textContent) >0){
     questionContainer.innerHTML = `
     <h2 class="question"> ${currQuestionData.questionText }</h2>
@@ -105,12 +104,12 @@ function startQuiz(){
     
     </div>
     `
-    // console.log(questionContainer.children[1])
     let mcqOptions = questionContainer.children[1]
     mcqOptions.addEventListener('click', verifyAnswer)
 
   }else{
     
+    clearInterval(interval)
     console.log('end quiz')
     questionContainer.hidden = true
     endQuizContainer.hidden = false
@@ -164,9 +163,8 @@ function verifyAnswer(event){
     result.textContent = 'CORRECT HE BHAI'
     score += 1
   }else{
-    
-    result.textContent = 'INCORRECT HE BHAI'
     userClicked.classList.add('incorrect')
+    result.textContent = 'INCORRECT HE BHAI'
     timer.textContent = parseInt(timer.textContent)-5
   }
   
@@ -208,7 +206,6 @@ function showHighScoreViaLeaderboard(){
   const allScore = document.querySelector('.all-scores')
   allScore.innerHTML += ''
   showHighScore(allScore)
-
 
 }
 
