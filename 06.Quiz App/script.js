@@ -91,7 +91,7 @@ function startQuiz(){
   
   const currQuestionData = questions[currQue]
   console.log(currQuestionData)
-  if(currQue < questions.length  && parseInt(timer.textContent) >66){
+  if(currQue < questions.length  && parseInt(timer.textContent) >0){
     questionContainer.innerHTML = `
     <h2 class="question"> ${currQuestionData.questionText }</h2>
     <div class="mcq-options">
